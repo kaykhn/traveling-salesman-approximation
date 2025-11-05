@@ -1,6 +1,7 @@
 # Compiler and flags
 CC = gcc
 CFLAGS = -Wall -Wextra -O2
+LDFLAGS = -lm
 
 # Target executable name
 TARGET = tsp
@@ -10,7 +11,7 @@ all: $(TARGET)
 
 # Build rule
 $(TARGET): tsp.c
-	$(CC) $(CFLAGS) tsp.c -o $(TARGET)
+	$(CC) $(CFLAGS) tsp.c -o $(TARGET) $(LDFLAGS)
 
 # Run the program
 run: $(TARGET)
