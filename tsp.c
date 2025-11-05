@@ -422,13 +422,13 @@ int *computeTSP(node *nodes, int n, int **distMatrix)
       free(paths[i]);
     }
   }
-  fprintf(stderr, "\n");
+  //fprintf(stderr, "\n");
   free(paths);
   int val = computeSolutionValue(bestPath, distMatrix, n);
-  fprintf(stderr, "%d\t", val);
+  //fprintf(stderr, "%d\t", val);
   threeOpt(bestPath, distMatrix, n);
   val = computeSolutionValue(bestPath, distMatrix, n);
-  fprintf(stderr, ".%d.\t", val);
+  //fprintf(stderr, ".%d.\t", val);
   return bestPath;
 }
 
